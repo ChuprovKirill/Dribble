@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Dribble</string>
+    <string name="hello">Hello. This is a informal application. You have to give a permission - just once :) </string>
+</resources>

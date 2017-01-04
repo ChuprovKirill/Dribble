@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/author_name"
+        android:textStyle="bold"
+        android:layout_below="@+id/avatar"
+        android:layout_marginTop="10dp"
+         />
+
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:srcCompat="@drawable/image_placeholder"
+        android:id="@+id/avatar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp" />
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/city"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/author_name"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/whois"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/city"
+        />
+
+    <TextView
+        android:text="Likes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/likesName"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/whois"
+        android:layout_toStartOf="@+id/avatar" />
+
+    <TextView
+        android:text="Followers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/followersName"
+        android:layout_marginTop="25dp"
+
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/whois"
+        android:layout_toEndOf="@+id/avatar" />
+
+    <TextView
+        android:text="follower count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/followersCount"
+        android:layout_below="@+id/followersName"
+        android:layout_alignStart="@+id/followersName"
+        android:layout_alignEnd="@+id/followersName" />
+
+    <TextView
+        android:text="likes count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/likesCount"
+        android:layout_below="@+id/likesName"
+        android:layout_alignEnd="@+id/likesName"
+        android:layout_alignStart="@+id/likesName"
+        android:layout_alignBottom="@+id/followersCount" />
+
+    <TabHost
+        android:id="@+id/tabHost"
+        android:layout_width="200dip"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/likesCount"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/Likes"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/likes_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+                    </android.support.v7.widget.RecyclerView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/Followers"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/followers_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+                    </android.support.v7.widget.RecyclerView>
+
+                </RelativeLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+</RelativeLayout>

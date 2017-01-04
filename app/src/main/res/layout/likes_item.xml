@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="15dp"
+        app:srcCompat="@drawable/image_placeholder"
+        android:id="@+id/liker_avatar"
+        android:layout_marginBottom="15dp"/>
+
+    <TextView
+        android:text="liker_name"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/liker_name"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/liker_avatar"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"/>
+
+    <TextView
+        android:text="liked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/liker_name"
+        android:layout_toEndOf="@+id/liker_name"
+        android:layout_marginStart="15dp"
+        android:id="@+id/liked" />
+
+    <TextView
+        android:text="shot_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/liked"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_toEndOf="@+id/liked"
+        android:layout_marginStart="15dp"
+        android:id="@+id/shot_name" />
+
+    <TextView
+        android:text="date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/shot_name"
+        android:layout_toEndOf="@+id/shot_name"
+        android:layout_marginStart="15dp"
+        android:id="@+id/date" />
+</RelativeLayout>

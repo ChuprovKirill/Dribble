@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ToggleButton
+        android:id="@+id/like_button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/like_button_background"
+        style="@style/toggleButton"
+        android:layout_below="@+id/picture"
+        />
+
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:id="@+id/avatar"
+        android:layout_marginLeft="15dp"
+
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="PictureName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/picture_name"
+        android:layout_marginLeft="15dp"
+
+        android:layout_below="@+id/avatar"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"/>
+
+    <TextView
+        android:text="Name"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_name"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="70dp" />
+
+        <ImageView
+            android:layout_width="400dp"
+            android:id="@+id/picture"
+            android:layout_height="300dp"
+            android:layout_below="@id/picture_name"
+            />
+
+    <TextView
+        android:text="Description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:id="@+id/description"
+        android:layout_below="@+id/like_button"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:layout_width="40dp"
+        android:id="@+id/comment_button"
+        android:layout_height="40dp"
+        android:background="@drawable/comment"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/picture"
+        android:layout_toEndOf="@+id/like_button" />
+
+
+</RelativeLayout>
